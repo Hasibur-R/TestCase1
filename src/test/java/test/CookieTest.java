@@ -11,7 +11,6 @@ public class CookieTest extends BaseTest {
 
     @Test
     public void verifyCookieTest() {
-        AqualityServices.getBrowser().maximize();
         AqualityServices.getBrowser().goTo(EnvironmentConfig.getUrl());
         AqualityServices.getBrowser().waitForPageToLoad();
 
