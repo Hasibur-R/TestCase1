@@ -42,9 +42,9 @@ public class RegistrationTest extends BaseTest {
 
         //Page 3 card2
         Assert.assertTrue(gamePage.getInterestsForm().state().isDisplayed(), "Registration card 2 is not displayed");
-        gamePage.getInterestsForm().uploadImage(imagePath);
         gamePage.getInterestsForm().clickUnselectAllCheckbox();
         gamePage.getInterestsForm().chooseInterests(DEFAULT_INTEREST);
+        gamePage.getInterestsForm().uploadImage(imagePath);
         gamePage.getInterestsForm().clickNextButton();
 
         //page 4 card3
