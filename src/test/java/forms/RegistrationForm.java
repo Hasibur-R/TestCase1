@@ -43,7 +43,7 @@ public class RegistrationForm extends Form {
 
     //click on Domain extension and select random option
     public void selectRandomOptionFromDropdown() { //Select random Domain
-        domainSelectorDropdown.click();
+        domainSelectorDropdown.clickAndWait();
 
         List<IButton> dropdownOptions = getElementFactory().findElements(DROPDOWN_OPTION_LOCATOR, IButton.class);
         int randomIndex = RandomUtils.generateRandomNumber(dropdownOptions.size());
