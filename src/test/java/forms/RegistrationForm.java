@@ -56,7 +56,6 @@ public class RegistrationForm extends Form {
 
     //select the tick
     public void unTickTermsAndConditions() {
-        AqualityServices.getBrowser().setImplicitWaitTimeout(Duration.ofSeconds(5000));
         doNotAcceptTermsCheckBox.click();
     }
 
