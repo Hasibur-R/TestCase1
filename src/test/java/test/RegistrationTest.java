@@ -36,15 +36,16 @@ public class RegistrationTest extends BaseTest {
         gamePage.getRegistrationForm().writePassword(randomPassword);
         gamePage.getRegistrationForm().writeUserName(email);
         gamePage.getRegistrationForm().writeDomains(randomDomain);
+        gamePage.getRegistrationForm().clickSelector();
         gamePage.getRegistrationForm().selectRandomOptionFromDropdown();
         gamePage.getRegistrationForm().unTickTermsAndConditions();
         gamePage.getRegistrationForm().clickNextPage();
 
         //Page 3 card2
         Assert.assertTrue(gamePage.getInterestsForm().state().isDisplayed(), "Registration card 2 is not displayed");
+        gamePage.getInterestsForm().uploadImage(imagePath);
         gamePage.getInterestsForm().clickUnselectAllCheckbox();
         gamePage.getInterestsForm().chooseInterests(DEFAULT_INTEREST);
-        gamePage.getInterestsForm().uploadImage(imagePath);
         gamePage.getInterestsForm().clickNextButton();
 
         //page 4 card3

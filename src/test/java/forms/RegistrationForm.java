@@ -41,10 +41,12 @@ public class RegistrationForm extends Form {
         domainsCheckBox.clearAndType(input);
     }
 
+    public void clickSelector(){
+        domainSelectorDropdown.clickAndWait();
+    }
+
     //click on Domain extension and select random option
     public void selectRandomOptionFromDropdown() { //Select random Domain
-        domainSelectorDropdown.clickAndWait();
-
         List<IButton> dropdownOptions = getElementFactory().findElements(DROPDOWN_OPTION_LOCATOR, IButton.class);
         int randomIndex = RandomUtils.generateRandomNumber(dropdownOptions.size());
         dropdownOptions.get(randomIndex).click();
