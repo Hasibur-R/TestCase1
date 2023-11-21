@@ -40,7 +40,6 @@ public class RegistrationTest extends BaseTest {
         gamePage.getRegistrationForm().writeDomains(randomDomain);
         gamePage.getRegistrationForm().clickSelector();
         gamePage.getRegistrationForm().selectRandomOptionFromDropdown();
-        AqualityServices.getBrowser().setImplicitWaitTimeout(Duration.ofSeconds(2000));
         gamePage.getRegistrationForm().unTickTermsAndConditions();
         gamePage.getRegistrationForm().clickNextPage();
 

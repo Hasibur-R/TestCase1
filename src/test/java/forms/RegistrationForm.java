@@ -1,7 +1,9 @@
 package forms;
 
+import java.time.Duration;
 import java.util.List;
 
+import aquality.selenium.browser.AqualityServices;
 import org.openqa.selenium.By;
 
 import aquality.selenium.elements.interfaces.IButton;
@@ -54,6 +56,7 @@ public class RegistrationForm extends Form {
 
     //select the tick
     public void unTickTermsAndConditions() {
+        AqualityServices.getBrowser().setImplicitWaitTimeout(Duration.ofSeconds(5000));
         doNotAcceptTermsCheckBox.click();
     }
 
