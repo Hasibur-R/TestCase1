@@ -8,6 +8,8 @@ import config.TestDataConfig;
 import forms.GamePage;
 import utils.RandomUtils;
 
+import java.time.Duration;
+
 public class RegistrationTest extends BaseTest {
 	private static final int COMMON_STRING_LENGTH = 10;
     private static final int DEFAULT_INTEREST = 3;
@@ -38,6 +40,7 @@ public class RegistrationTest extends BaseTest {
         gamePage.getRegistrationForm().writeDomains(randomDomain);
         gamePage.getRegistrationForm().clickSelector();
         gamePage.getRegistrationForm().selectRandomOptionFromDropdown();
+        AqualityServices.getBrowser().setImplicitWaitTimeout(Duration.ofSeconds(2000));
         gamePage.getRegistrationForm().unTickTermsAndConditions();
         gamePage.getRegistrationForm().clickNextPage();
 

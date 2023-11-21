@@ -49,12 +49,12 @@ public class RegistrationForm extends Form {
     public void selectRandomOptionFromDropdown() { //Select random Domain
         List<IButton> dropdownOptions = getElementFactory().findElements(DROPDOWN_OPTION_LOCATOR, IButton.class);
         int randomIndex = RandomUtils.generateRandomNumber(dropdownOptions.size());
-        dropdownOptions.get(randomIndex).clickAndWait();
+        dropdownOptions.get(randomIndex).click();
     }
 
     //select the tick
     public void unTickTermsAndConditions() {
-        doNotAcceptTermsCheckBox.clickAndWait();
+        doNotAcceptTermsCheckBox.click();
     }
 
     //Next Page
