@@ -20,7 +20,7 @@
         "Performance": "All"
       },
       "pageLoadStrategy": "Normal",
-      "startArguments": []
+      "startArguments": ["--start-maximized"]
     },
     "edge": {
       "webDriverVersion": "latest",
@@ -58,7 +58,7 @@
         "browser.download.manager.useWindow": false,
         "browser.download.panel.shown": false
       },
-      "startArguments": []
+      "startArguments": ["--start-maximized"]
     },
     "iexplorer": {
       "webDriverVersion": "latest",

@@ -59,6 +59,6 @@ public class GamePage extends Form {
 
     //No, really no button
     public void clickCookieYesButton() {
-        hideCookieButton.click();
+        hideCookieButton.clickAndWait();
     }
 }

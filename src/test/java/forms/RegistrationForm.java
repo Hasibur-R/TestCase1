@@ -1,9 +1,7 @@
 package forms;
 
-import java.time.Duration;
 import java.util.List;
 
-import aquality.selenium.browser.AqualityServices;
 import org.openqa.selenium.By;
 
 import aquality.selenium.elements.interfaces.IButton;
@@ -43,12 +41,10 @@ public class RegistrationForm extends Form {
         domainsCheckBox.clearAndType(input);
     }
 
-    public void clickSelector(){
-        domainSelectorDropdown.click();
-    }
-
     //click on Domain extension and select random option
     public void selectRandomOptionFromDropdown() { //Select random Domain
+        domainSelectorDropdown.click();
+
         List<IButton> dropdownOptions = getElementFactory().findElements(DROPDOWN_OPTION_LOCATOR, IButton.class);
         int randomIndex = RandomUtils.generateRandomNumber(dropdownOptions.size());
         dropdownOptions.get(randomIndex).click();
